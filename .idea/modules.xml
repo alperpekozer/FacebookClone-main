@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ApiGatewayService/FaccebookClone.ApiGatewayService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ApiGatewayService/FaccebookClone.ApiGatewayService.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AuthService/FaccebookClone.AuthService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AuthService/FaccebookClone.AuthService.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ConfigServer/FaccebookClone.ConfigServer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ConfigServer/FaccebookClone.ConfigServer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ConfigServerGit/FaccebookClone.ConfigServerGit.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ConfigServerGit/FaccebookClone.ConfigServerGit.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ElasticService/FaccebookClone.ElasticService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ElasticService/FaccebookClone.ElasticService.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PostService/FaccebookClone.PostService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/PostService/FaccebookClone.PostService.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UserService/FaccebookClone.UserService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/UserService/FaccebookClone.UserService.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UserService/com.muhammet.FaccebookClone.UserService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/UserService/com.muhammet.FaccebookClone.UserService.main.iml" />
+    </modules>
+  </component>
+</project>

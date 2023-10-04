@@ -1,0 +1,28 @@
+server:
+  port: 9090
+
+spring:
+  zipkin:
+    enable: true
+    base-url: http://localhost:9411
+    service:
+      name: auth-service
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: java7
+    password: root
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/FacebookAuthDB
+    username: postgres
+    password: 1234bilgeADAM
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
