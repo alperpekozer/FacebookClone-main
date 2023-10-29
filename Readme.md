@@ -104,7 +104,6 @@
     -------------------- English Version---------------------------
 
     
-Tabii ki, işte çeviri:
 
 1. Installation steps
 1.1. Open a blank Gradle project.
