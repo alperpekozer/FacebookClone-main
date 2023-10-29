@@ -100,3 +100,75 @@
 
     ElasticSearch için gerekli bağımlılılar:
     'org.springframework.boot:spring-boot-starter-data-elasticsearch:$VERSION'
+
+    -------------------- English Version---------------------------
+
+    
+Tabii ki, işte çeviri:
+
+1. Installation steps
+1.1. Open a blank Gradle project.
+1.2. Code the dependencies.gradle file
+1.2.1. Included the libraries in the ext{} block to our project.1.2.2. Determined the versions of the libraries in the versions{} block.1.2.3. Specified the libraries we will use in the libs{} block.
+
+1.3. Coded the build.gradle file, in this file we determined the libraries that we will use in common in all our sub-projects.
+1.4. Determined the microservices that we need for the architecture of our application and added them as modules.
+1.5. Added the following code block that we need to add to each module build.gradle files.
+buildscript {
+dependencies {
+classpath("org.springframework.boot:spring-boot-gradle-plugin:${versions.springBoot}")
+}
+}
+1.6. Added the default codings that we use in monolithic architecture to all our modules.
+1.7. If there are any special dependencies that we want to use in a module, we added them to the build.gradle files.
+2. MongoDB Setup and Usage
+2.1. Run MongoDB on Docker
+Run the following commands on a system with Docker installed by entering the command line below.
+
+docker run --name dockermongo -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=BilgeAdmin -e MONGO_INITDB_ROOT_PASSWORD=root -d mongo
+
+2.2. Connect to MongoDB
+IMPORTANT!!!Do not use admin user and passwords to access databases when using MongoDB.To create a new database, the admin user is used to process and a new user is created to be assigned to this database. This way, there is no need for the admin user to perform operations on the DB.
+
+1. First, you create a database. (FacebookDB)2. You use mongosh to write 'use DB_NAME' in the console and switch to the relevant DB3. You need to create a new user on the same screen. This user will be authorized.
+
+db.createUser({
+user: "Java7User",
+pwd: "root",
+roles: ["readWrite", "dbAdmin"]
+})
+-- db.createUser({user: "Java7User",pwd: "root",roles: ["readWrite", "dbAdmin"]})
+
+## 3. RabbitMQ Setup and Usage
+
+3.1. Run RabbitMQ on Docker
+docker run -d --name my-rabbitmq -e RABBITMQ_DEFAULT_USER=java7 -e RABBITMQ_DEFAULT_PASS=root -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+
+3.2. Connect to RabbitMQ
+gradle import -> org.springframework.boot:spring-boot-starter-amqp:VERSIONRabbit Config is configured and the queue structure is defined.
+
+4. Setting up and Using Zipkin Server
+docker run --name zipkinfb -d -p 9411:9411 openzipkin/zipkin
+
+Required dependencies for Zipkin:'org.springframework.cloud:spring-cloud-starter-sleuth:3.1.7''org.springframework.cloud:spring-cloud-sleuth-zipkin:3.1.7'
+
+Codes to be added to application.yml:
+
+zipkin:
+enabled: true
+base-url: http://localhost:9411
+service:
+name: config-server
+5. Redis Setup and Usage
+docker run --name localredis -d -p 6379:6379 redis
+
+Required dependencies for Redis:'org.springframework.boot:spring-boot-starter-data-redis:$VERSION'
+
+We need to do the connection codings for Redis:
+
+@Bean
+public LettuceConnectionFactory redisConnectionFactory() {
+
+return new LettuceConnectionFactory(
+new RedisStandaloneConfiguration("localhost", 6379));
+}
