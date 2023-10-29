@@ -101,11 +101,11 @@
     ElasticSearch için gerekli bağımlılılar:
     'org.springframework.boot:spring-boot-starter-data-elasticsearch:$VERSION'
 
-    -------------------- English Version---------------------------
-
     
 
-1. Installation steps
+  -------------------- English Version---------------------------  
+
+1. Installation steps  -------------------- English Version---------------------------
 1.1. Open a blank Gradle project.
 1.2. Code the dependencies.gradle file
 1.2.1. Included the libraries in the ext{} block to our project.1.2.2. Determined the versions of the libraries in the versions{} block.1.2.3. Specified the libraries we will use in the libs{} block.
