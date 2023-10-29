@@ -10,7 +10,7 @@
         </processorPath>
         <module name="com.muhammet.FaccebookClone.PostService.main" />
         <module name="com.muhammet.FaccebookClone.ConfigServer.main" />
-        <module name="com.muhammet.FaccebookClone.UserService.main" />
+        <module name="UserService.FaccebookClone.UserService.main" />
         <module name="com.muhammet.FaccebookClone.ApiGatewayService.main" />
         <module name="FaccebookClone.main" />
         <module name="com.muhammet.FaccebookClone.ElasticService.main" />

@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ElasticService/FaccebookClone.ElasticService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ElasticService/FaccebookClone.ElasticService.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/PostService/FaccebookClone.PostService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/PostService/FaccebookClone.PostService.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/UserService/FaccebookClone.UserService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/UserService/FaccebookClone.UserService.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UserService/UserService.FaccebookClone.UserService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/UserService/UserService.FaccebookClone.UserService.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/UserService/com.muhammet.FaccebookClone.UserService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/UserService/com.muhammet.FaccebookClone.UserService.main.iml" />
     </modules>
   </component>

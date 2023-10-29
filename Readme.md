@@ -1,6 +1,9 @@
--------------------- English Version---------------------------  
+# MİKROSERVİS İŞLEMLERİ VE NOTLARIM(MICROSERVICE TRANSACTIONS AND NOTES)
 
-1. Installation steps  -------------------- English Version---------------------------
+## -------------------- English Version---------------------------  
+
+## 1. Installation steps  
+```
 1.1. Open a blank Gradle project.
 1.2. Code the dependencies.gradle file
 1.2.1. Included the libraries in the ext{} block to our project.1.2.2. Determined the versions of the libraries in the versions{} block.1.2.3. Specified the libraries we will use in the libs{} block.
@@ -15,7 +18,10 @@ classpath("org.springframework.boot:spring-boot-gradle-plugin:${versions.springB
 }
 1.6. Added the default codings that we use in monolithic architecture to all our modules.
 1.7. If there are any special dependencies that we want to use in a module, we added them to the build.gradle files.
-2. MongoDB Setup and Usage
+```
+
+## 2. MongoDB Setup and Usage
+```
 2.1. Run MongoDB on Docker
 Run the following commands on a system with Docker installed by entering the command line below.
 
@@ -32,16 +38,17 @@ pwd: "root",
 roles: ["readWrite", "dbAdmin"]
 })
 -- db.createUser({user: "Java7User",pwd: "root",roles: ["readWrite", "dbAdmin"]})
-
+```
 ## 3. RabbitMQ Setup and Usage
-
+```
 3.1. Run RabbitMQ on Docker
 docker run -d --name my-rabbitmq -e RABBITMQ_DEFAULT_USER=java7 -e RABBITMQ_DEFAULT_PASS=root -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 
 3.2. Connect to RabbitMQ
 gradle import -> org.springframework.boot:spring-boot-starter-amqp:VERSIONRabbit Config is configured and the queue structure is defined.
-
-4. Setting up and Using Zipkin Server
+```
+## 4. Setting up and Using Zipkin Server
+```
 docker run --name zipkinfb -d -p 9411:9411 openzipkin/zipkin
 
 Required dependencies for Zipkin:'org.springframework.cloud:spring-cloud-starter-sleuth:3.1.7''org.springframework.cloud:spring-cloud-sleuth-zipkin:3.1.7'
@@ -53,7 +60,9 @@ enabled: true
 base-url: http://localhost:9411
 service:
 name: config-server
-5. Redis Setup and Usage
+```
+## 5. Redis Setup and Usage
+```
 docker run --name localredis -d -p 6379:6379 redis
 
 Required dependencies for Redis:'org.springframework.boot:spring-boot-starter-data-redis:$VERSION'
@@ -66,10 +75,10 @@ public LettuceConnectionFactory redisConnectionFactory() {
 return new LettuceConnectionFactory(
 new RedisStandaloneConfiguration("localhost", 6379));
 }
+```
 
 
 
-# MİKROSERVİS İŞLEMLERİ VE NOTLARIM
 
 ## 1. Kurulum adımları
 
